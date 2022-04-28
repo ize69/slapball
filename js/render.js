@@ -7,6 +7,7 @@ var render = function () {
 
   // ball
   if (ballBgImage.loaded) {
+  //draw ball
     ctx.drawImage(ballBgImage, ball.x, ball.y);
   }
 
@@ -26,7 +27,8 @@ var render = function () {
   ctx.fillText(p2.score, canvas.width - 32 - 10, 32);
 
   // timer
-   ctx.fillText("00:00", canvas.width/2 -24 , 32);
+  ctx.font = "18px Courier"
+   ctx.fillText(getRoundDuration(), canvas.width/2 -24 , 32);
   // Text options
   ctx.font = "36px Helvetica";
 

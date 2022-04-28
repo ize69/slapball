@@ -3,6 +3,7 @@ var update = function (modifier) {
 
   if (32 in keysDown) { // Start the game with the spacebar
     isGameStarted = true;
+    startRound();
   }
 
   if (!isGameStarted) {
@@ -102,7 +103,9 @@ var update = function (modifier) {
 
     // Finally I reflect the ball
     ball.deflect(p1.direction);
-
+    ball.d = true;
+    // draw ball flipped
+    ballBgImage.src = "assets/ballL.png";
     // go back on track, just in case it went too out of boundaries
     ball.x = p1.x + p1.width +1;
   }
@@ -124,7 +127,8 @@ var update = function (modifier) {
 
     // Finally I reflect the ball
     ball.deflect(p2.direction);
-
+    ball.d = false;
+    ballBgImage.src = "assets/ball.png";
     // go back on track, just in case it went too out of boundaries
     ball.x = p2.x - ball.size -1;
   }

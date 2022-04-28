@@ -1,6 +1,8 @@
+var fliped = false;
 var Ball = function () {
   this.size = 48,
   this.speed = 300,
+
   /*
   * R = 2*(V dot N)*N - V
   * V: velocity vector
@@ -31,6 +33,15 @@ var Ball = function () {
     },
     set: function (value) {
       this.pos.y = value;
+    }
+  });
+
+  Object.defineProperty(this, 'd', {
+    get: function () {
+      return fliped;
+    },
+    set: function (value) {
+      flipped = value;
     }
   });
 
