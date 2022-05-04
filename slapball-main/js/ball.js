@@ -1,7 +1,8 @@
 var fliped = false;
+var ballVelocity = 300;
 var Ball = function () {
   this.size = 48,
-  this.speed = 300,
+  this.speed = ballVelocity;
 
   /*
   * R = 2*(V dot N)*N - V
@@ -44,6 +45,14 @@ var Ball = function () {
       flipped = value;
     }
   });
-
+  Object.defineProperty(this, 'v', {
+    get: function () {
+      return ballVelocity;
+    },
+    set: function (value) {
+      this.speed = value;
+      ballVelocity = value;
+    }
+  });
   return this;
 }
