@@ -28,12 +28,12 @@ var render = function () {
 
   // timer
   ctx.font = "18px Courier"
-   ctx.fillText(getRoundDuration(), canvas.width/2 -24 , 32);
+  ctx.fillText(getRoundDuration(), canvas.width/2 -24 , 32);
   // Text options
   ctx.font = "36px Helvetica";
 
   // Initial text
   if (!isGameStarted) {
-    ctx.fillText("Press spacebar to start", 200, canvas.height / 2);
+    ctx.fillText("Press spacebar to start", 200, canvas.height / 2 + 28);
   }
 };

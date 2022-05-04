@@ -11,7 +11,7 @@ var reset = function () {
 
   ball.pos = new Vector2(xPosition, yPosition);
   ball.velocity = new Vector2(xVelocity, yVelocity);
-  ball.v =ball.v + preLevelSpeedIncreese;
+  ball.v = ball.v + preLevelSpeedIncreese;
   p1.pos.set(xPositionP1, yPositionP1);
   p2.pos.set(xPositionP2, yPositionP2);
 
